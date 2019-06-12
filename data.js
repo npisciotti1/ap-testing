@@ -13,7 +13,7 @@ module.exports = {
     "color": "green",
     "size": "300x300"
   },
-  "box3": {
+  "circle": {
     "name": "Jerry",
     "quantity": "1",
     "color": "red",
