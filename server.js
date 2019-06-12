@@ -17,9 +17,9 @@ app.use(cors());
 app.use(routes);
 
 app.get('/', (req, res) => {
-  res.send(200, 'YARPPP')
+  res.status(200).send('AP Testing Server')
 });
 
 app.listen(PORT, () => {
-  debug(`App serving on Port: ${PORT}`)
+  console.log(`App serving on Port: ${PORT}`)
 })

@@ -6,6 +6,7 @@
 const createError = require('http-errors');
 
 module.exports = function(req, res, next) {
+  console.log('request received:', req.headers)
 
   var authHeader = req.headers.authorization;
   if (!authHeader) {
@@ -24,6 +25,8 @@ module.exports = function(req, res, next) {
     password: authArray[1]
   };
 
+  console.log('req.auth', req.auth)
+
   if (!req.auth.username) {
     return next(createError(401, 'username required'));
   }
@@ -35,7 +38,7 @@ module.exports = function(req, res, next) {
     return next(createError(401, 'please provide the correct username'))
   }
 
-  if(req.auth.username !== 'apIsAwesome1234') {
+  if(req.auth.password !== 'apIsAwesome1234') {
     return next(createError(401, 'please provide the correct password'))
   }
   next();

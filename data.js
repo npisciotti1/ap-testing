@@ -7,10 +7,10 @@ module.exports = {
     "color": "blue",
     "size": "150x150"
   },
-  "box1": {
+  "box2": {
     "name": "Jeff",
     "quantity": "2",
-    "color": "green"
+    "color": "green",
     "size": "300x300"
   },
   "box3": {
